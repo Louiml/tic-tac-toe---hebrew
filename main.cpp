@@ -52,7 +52,7 @@ int main()
     {
         cout << "מחשב " << currentPlayer <<", הזן אחד מהמספרים מהטבלה: ";
         cin >> chosenSquare;
-        while ((chosenSquare<=0 || chosenSquare>9) || (board[chosenSquare-1]=='X' || board[chosenSquare-1]=='O'))// Print the following message if the input is out of range
+        while ((chosenSquare<=0 || chosenSquare>9) || (board[chosenSquare-1]=='X' || board[chosenSquare-1]=='O'));
         {
             if (chosenSquare<=0 || chosenSquare>9)
             {
@@ -83,7 +83,7 @@ int main()
             {
                 board[chosenSquare-1]='O';
             }
-            swap(currentPlayer, lastPlayer);; // currentPlayer = PLAYER_X
+            swap(currentPlayer, lastPlayer);
         }
         displayBoard(board);
         if (board[0]==board[3] && board[3]==board[6])
